@@ -24,7 +24,6 @@ deployed site.
 ├── styles.css
 ├── main.js
 └── assets/
-    ├── icons/
     └── media/
 ```
 
