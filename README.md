@@ -6,7 +6,7 @@ homepage for [EVG — Efficient Visual Generation](https://github.com/evg-projec
 The site is intentionally dependency-free: plain HTML, CSS, and JavaScript can
 be served directly by GitHub Pages without a build step.
 
-## Local preview
+## Optional local preview
 
 ```bash
 python3 -m http.server 4173
@@ -30,14 +30,17 @@ deployed site.
 
 ## Video assets
 
-The directly playable comparison videos are optimized web editions derived
+All 50 directly playable comparison videos are optimized web editions derived
 from `evg/asserts/visualization/videos/` in the main EVG repository. The source
 videos are 4032×1536 six-panel composites; homepage editions are 2016×768,
-H.264/yuv420p, muted, and prepared with `faststart` for browser streaming.
+H.264/yuv420p, muted, and prepared with `faststart` for browser streaming. The
+eight annotated difference highlights are optimized derivatives of the review
+images used in the main repository README.
 
-Only the selected scene is loaded by the main player. Other scenes are fetched
-when selected, which keeps the initial page transfer small. Original source
-videos are never modified.
+Only the selected scene is loaded by the main player. Gallery posters load
+lazily and other videos are fetched only when selected, which keeps the initial
+page transfer small. The web media are regular Git files because GitHub Pages
+cannot serve Git LFS objects. Original source videos are never modified.
 
 ## Deployment
 

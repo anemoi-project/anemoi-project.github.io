@@ -15,7 +15,7 @@
       content="Think in 2D. Compute only what matters."
     />
     <meta property="og:url" content="https://evg-project.github.io/" />
-    <meta property="og:image" content="https://evg-project.github.io/assets/media/product-poster.jpg" />
+    <meta property="og:image" content="https://evg-project.github.io/assets/media/scene-01-poster.jpg" />
     <meta property="og:image:width" content="1344" />
     <meta property="og:image:height" content="512" />
     <meta property="og:image:alt" content="Six-panel EVG visual generation comparison" />
@@ -113,28 +113,11 @@
             </a>
           </div>
 
-          <div class="hero-proof reveal reveal-delay-3" role="list" aria-label="EVG highlights">
-            <div class="proof-item proof-primary" role="listitem">
-              <strong>1.30<span>×</span></strong>
-              <div>
-                <span>End-to-end speedup</span>
-                <small>MiniMax-H3 · 4× RTX 4090</small>
-              </div>
-            </div>
-            <div class="proof-item" role="listitem">
-              <strong>80<span>%</span></strong>
-              <div>
-                <span>Sparse attention</span>
-                <small>Remaining 20% in FP8</small>
-              </div>
-            </div>
-            <div class="proof-item" role="listitem">
-              <strong>0</strong>
-              <div>
-                <span>Training required</span>
-                <small>Drop into inference</small>
-              </div>
-            </div>
+          <!-- Reserved for a future announcement. Keep the three cells empty for now. -->
+          <div class="hero-proof is-placeholder reveal reveal-delay-3" aria-hidden="true">
+            <div class="proof-item"></div>
+            <div class="proof-item"></div>
+            <div class="proof-item"></div>
           </div>
         </div>
 
@@ -154,8 +137,8 @@
               <h2 id="showcase-title">Same prompt. Same seed.<br />Less attention.</h2>
             </div>
             <p>
-              Six synchronized outputs make quality differences visible at a glance.
-              Every panel uses the same checkpoint, conditioning, scheduler, and decoder.
+              Explore 50 prompts through six synchronized outputs. Every panel uses
+              the same checkpoint, conditioning, scheduler, and decoder.
             </p>
           </div>
 
@@ -175,14 +158,14 @@
                 loop
                 playsinline
                 preload="metadata"
-                poster="assets/media/product-poster.jpg"
+                poster="assets/media/scene-01-poster.jpg"
                 aria-label="Six-panel EVG visual generation comparison"
-                aria-describedby="comparison-description scene-description-text scene-finding-text"
+                aria-describedby="comparison-description scene-description-text"
                 data-comparison-video
               >
-                <source src="assets/media/product-comparison.mp4" type="video/mp4" />
+                <source src="assets/media/scene-01.mp4" type="video/mp4" />
                 Your browser does not support embedded MP4 video.
-                <a href="assets/media/product-comparison.mp4">Download the comparison video.</a>
+                <a href="assets/media/scene-01.mp4" data-video-download>Download the comparison video.</a>
               </video>
 
               <div class="video-vignette" aria-hidden="true"></div>
@@ -204,138 +187,114 @@
             </div>
 
             <p class="sr-only" id="comparison-description">
-              A synchronized six-panel comparison of Dense, Sol-Attn, SpargeAttn,
-              and EVG at 80% sparsity with 20% FP16, a 10%/10% FP8/FP16 mix,
-              or 20% FP8.
+              A synchronized six-panel comparison. From left to right, the panels are
+              Dense, Sol-Attn, SpargeAttn, EVG with 20% FP16, EVG with a 10%/10%
+              FP8/FP16 mix, and EVG with 20% FP8.
             </p>
+            <p class="sr-only" id="scene-description-text" data-scene-description aria-live="polite">
+              A black wireless-earbud charging case in a minimalist studio product
+              shot. Compare reflections, earbud geometry, and shadow consistency
+              across the six synchronized panels. The annotated review flags
+              earbud-geometry changes in Sol-Attn and SpargeAttn; no corresponding
+              region is highlighted in the three EVG panels.
+            </p>
+          </div>
 
-            <div class="scenario-picker" role="group" aria-label="Choose comparison scene">
-              <button
-                class="scenario is-active"
-                type="button"
-                aria-pressed="true"
-                data-scene="product"
-                data-label="Minimalist product"
-                data-src="assets/media/product-comparison.mp4"
-                data-poster="assets/media/product-poster.jpg"
-              >
-                <img src="assets/media/product-poster.jpg" alt="" width="252" height="96" />
-                <span><b>01</b> Product</span>
-              </button>
-              <button
-                class="scenario"
-                type="button"
-                aria-pressed="false"
-                data-scene="animation"
-                data-label="3D animated short"
-                data-src="assets/media/animation-comparison.mp4"
-                data-poster="assets/media/animation-poster.jpg"
-              >
-                <img src="assets/media/animation-poster.jpg" alt="" width="252" height="96" loading="lazy" />
-                <span><b>02</b> 3D short</span>
-              </button>
-              <button
-                class="scenario"
-                type="button"
-                aria-pressed="false"
-                data-scene="nature"
-                data-label="Nature documentary"
-                data-src="assets/media/nature-comparison.mp4"
-                data-poster="assets/media/nature-poster.jpg"
-              >
-                <img src="assets/media/nature-poster.jpg" alt="" width="252" height="96" loading="lazy" />
-                <span><b>03</b> Nature</span>
-              </button>
-              <button
-                class="scenario"
-                type="button"
-                aria-pressed="false"
-                data-scene="macro"
-                data-label="Macro insect"
-                data-src="assets/media/macro-comparison.mp4"
-                data-poster="assets/media/macro-poster.jpg"
-              >
-                <img src="assets/media/macro-poster.jpg" alt="" width="252" height="96" loading="lazy" />
-                <span><b>04</b> Macro</span>
-              </button>
-              <button
-                class="scenario"
-                type="button"
-                aria-pressed="false"
-                data-scene="eagle"
-                data-label="Eagle in flight"
-                data-src="assets/media/eagle-comparison.mp4"
-                data-poster="assets/media/eagle-poster.jpg"
-              >
-                <img src="assets/media/eagle-poster.jpg" alt="" width="252" height="96" loading="lazy" />
-                <span><b>05</b> Eagle</span>
-              </button>
-              <button
-                class="scenario"
-                type="button"
-                aria-pressed="false"
-                data-scene="tea"
-                data-label="Tea ceremony"
-                data-src="assets/media/tea-comparison.mp4"
-                data-poster="assets/media/tea-poster.jpg"
-              >
-                <img src="assets/media/tea-poster.jpg" alt="" width="252" height="96" loading="lazy" />
-                <span><b>06</b> Tea</span>
-              </button>
-              <button
-                class="scenario"
-                type="button"
-                aria-pressed="false"
-                data-scene="city"
-                data-label="City time-lapse"
-                data-src="assets/media/city-comparison.mp4"
-                data-poster="assets/media/city-poster.jpg"
-              >
-                <img src="assets/media/city-poster.jpg" alt="" width="252" height="96" loading="lazy" />
-                <span><b>07</b> City</span>
-              </button>
-              <button
-                class="scenario"
-                type="button"
-                aria-pressed="false"
-                data-scene="pottery"
-                data-label="Pottery wheel"
-                data-src="assets/media/pottery-comparison.mp4"
-                data-poster="assets/media/pottery-poster.jpg"
-              >
-                <img src="assets/media/pottery-poster.jpg" alt="" width="252" height="96" loading="lazy" />
-                <span><b>08</b> Pottery</span>
-              </button>
-            </div>
-
-            <div class="scene-description">
-              <span>Scene description</span>
-              <div aria-live="polite">
-                <p id="scene-description-text" data-scene-description>
-                  A black wireless-earbud charging case in a minimalist studio product
-                  shot. Compare reflections, earbud geometry, and shadow consistency
-                  across the six synchronized methods.
-                </p>
-                <p id="scene-finding-text" class="scene-finding" data-scene-finding>
-                  <strong>Observed:</strong> The project's difference-highlight review
-                  flags earbud geometry changes in Sol-Attn and SpargeAttn; no
-                  corresponding region is highlighted in the three EVG panels.
-                </p>
+          <div class="scene-browser reveal" data-scene-browser>
+            <div class="scene-browser-head">
+              <div>
+                <p class="section-index">Scene library</p>
+                <h3>All 50 comparisons.</h3>
+              </div>
+              <label class="scene-search">
+                <span class="sr-only">Search comparison scenes</span>
+                <svg aria-hidden="true" viewBox="0 0 18 18">
+                  <circle cx="7.5" cy="7.5" r="4.75" />
+                  <path d="m11 11 4 4" />
+                </svg>
+                <input type="search" placeholder="Search number or scene" autocomplete="off" data-scene-search />
+              </label>
+              <div class="scene-filters" role="group" aria-label="Filter comparison scenes">
+                <button type="button" class="is-active" aria-pressed="true" data-scene-filter="all">
+                  All <span>50</span>
+                </button>
+                <button type="button" aria-pressed="false" data-scene-filter="reviewed">
+                  Highlights <span>8</span>
+                </button>
               </div>
             </div>
+            <p class="scene-results" aria-live="polite" data-scene-results>Showing all 50 scenes</p>
+            <p class="sr-only" id="scene-grid-help">
+              Use the arrow keys to move between scene buttons, then press Enter or Space to load a comparison.
+            </p>
+            <div class="scene-grid" role="group" aria-label="Choose one of 50 comparison scenes" aria-describedby="scene-grid-help" data-scene-grid></div>
+            <p class="scene-empty" hidden data-scene-empty>No scenes match this search.</p>
+            <noscript><p class="scene-empty">Enable JavaScript to browse the full scene library.</p></noscript>
           </div>
 
-          <div class="method-legend reveal" role="group" aria-label="Comparison panel order">
-            <p>Panel order</p>
-            <ol>
-              <li><span>1</span>Dense</li>
-              <li><span>2</span>Sol-Attn</li>
-              <li><span>3</span>SpargeAttn</li>
-              <li class="is-evg"><span>4</span>EVG · 20% FP16</li>
-              <li class="is-evg"><span>5</span>EVG · 10/10 mixed</li>
-              <li class="is-evg"><span>6</span>EVG · 20% FP8</li>
-            </ol>
-          </div>
+          <section class="difference-gallery reveal" aria-labelledby="highlights-title">
+            <div class="difference-heading">
+              <div>
+                <p class="section-index">Difference highlights</p>
+                <h3 id="highlights-title">A closer look at eight scenes.</h3>
+              </div>
+              <p>
+                Annotated stills from the project review make localized differences
+                easier to inspect. Open any image for a larger view.
+              </p>
+            </div>
+
+            <div class="difference-grid">
+              <figure class="difference-card">
+                <a href="assets/media/scene-01-highlight.jpg" target="_blank" rel="noopener" aria-label="Open the Scene 01 annotated highlight in a new tab" aria-describedby="highlight-01-finding">
+                  <img src="assets/media/scene-01-highlight.jpg" alt="Annotated comparison highlight for the minimalist product scene" width="1680" height="640" loading="lazy" decoding="async" />
+                </a>
+                <figcaption><span>Scene 01</span><strong>Minimalist product</strong><button type="button" aria-label="Watch the Scene 01 minimalist product comparison" data-scene-jump="01">Watch comparison <span aria-hidden="true">↗</span></button><p class="sr-only" id="highlight-01-finding">The annotation flags earbud-geometry changes in Sol-Attn and SpargeAttn; no corresponding region is highlighted in the three EVG panels.</p></figcaption>
+              </figure>
+              <figure class="difference-card">
+                <a href="assets/media/scene-03-highlight.jpg" target="_blank" rel="noopener" aria-label="Open the Scene 03 annotated highlight in a new tab" aria-describedby="highlight-03-finding">
+                  <img src="assets/media/scene-03-highlight.jpg" alt="Annotated comparison highlight for the 3D animated short" width="1680" height="640" loading="lazy" decoding="async" />
+                </a>
+                <figcaption><span>Scene 03</span><strong>3D animated short</strong><button type="button" aria-label="Watch the Scene 03 3D animated short comparison" data-scene-jump="03">Watch comparison <span aria-hidden="true">↗</span></button><p class="sr-only" id="highlight-03-finding">The annotation flags fine subject-detail changes in Sol-Attn and SpargeAttn; no corresponding region is highlighted in the three EVG panels.</p></figcaption>
+              </figure>
+              <figure class="difference-card">
+                <a href="assets/media/scene-05-highlight.jpg" target="_blank" rel="noopener" aria-label="Open the Scene 05 annotated highlight in a new tab" aria-describedby="highlight-05-finding">
+                  <img src="assets/media/scene-05-highlight.jpg" alt="Annotated comparison highlight for the nature documentary" width="1680" height="640" loading="lazy" decoding="async" />
+                </a>
+                <figcaption><span>Scene 05</span><strong>Nature documentary</strong><button type="button" aria-label="Watch the Scene 05 nature documentary comparison" data-scene-jump="05">Watch comparison <span aria-hidden="true">↗</span></button><p class="sr-only" id="highlight-05-finding">The annotation flags differences around the small animal in Sol-Attn and SpargeAttn; no corresponding region is highlighted in the three EVG panels.</p></figcaption>
+              </figure>
+              <figure class="difference-card">
+                <a href="assets/media/scene-09-highlight.jpg" target="_blank" rel="noopener" aria-label="Open the Scene 09 annotated highlight in a new tab" aria-describedby="highlight-09-finding">
+                  <img src="assets/media/scene-09-highlight.jpg" alt="Annotated comparison highlight for the macro insect scene" width="1680" height="640" loading="lazy" decoding="async" />
+                </a>
+                <figcaption><span>Scene 09</span><strong>Macro insect</strong><button type="button" aria-label="Watch the Scene 09 macro insect comparison" data-scene-jump="09">Watch comparison <span aria-hidden="true">↗</span></button><p class="sr-only" id="highlight-09-finding">The annotation flags differences around the insect head in Sol-Attn and SpargeAttn; no corresponding region is highlighted in the three EVG panels.</p></figcaption>
+              </figure>
+              <figure class="difference-card">
+                <a href="assets/media/scene-15-highlight.jpg" target="_blank" rel="noopener" aria-label="Open the Scene 15 annotated highlight in a new tab" aria-describedby="highlight-15-finding">
+                  <img src="assets/media/scene-15-highlight.jpg" alt="Annotated comparison highlight for the eagle in flight scene" width="1680" height="640" loading="lazy" decoding="async" />
+                </a>
+                <figcaption><span>Scene 15</span><strong>Eagle in flight</strong><button type="button" aria-label="Watch the Scene 15 eagle in flight comparison" data-scene-jump="15">Watch comparison <span aria-hidden="true">↗</span></button><p class="sr-only" id="highlight-15-finding">The annotation flags differences around the distant flying subject in the comparison baselines; no corresponding region is highlighted in the three EVG panels.</p></figcaption>
+              </figure>
+              <figure class="difference-card">
+                <a href="assets/media/scene-18-highlight.jpg" target="_blank" rel="noopener" aria-label="Open the Scene 18 annotated highlight in a new tab" aria-describedby="highlight-18-finding">
+                  <img src="assets/media/scene-18-highlight.jpg" alt="Annotated comparison highlight for the tea ceremony" width="1680" height="640" loading="lazy" decoding="async" />
+                </a>
+                <figcaption><span>Scene 18</span><strong>Tea ceremony</strong><button type="button" aria-label="Watch the Scene 18 tea ceremony comparison" data-scene-jump="18">Watch comparison <span aria-hidden="true">↗</span></button><p class="sr-only" id="highlight-18-finding">The annotation flags hand-and-utensil detail changes in Sol-Attn and SpargeAttn; no corresponding region is highlighted in the three EVG panels.</p></figcaption>
+              </figure>
+              <figure class="difference-card">
+                <a href="assets/media/scene-30-highlight.jpg" target="_blank" rel="noopener" aria-label="Open the Scene 30 annotated highlight in a new tab" aria-describedby="highlight-30-finding">
+                  <img src="assets/media/scene-30-highlight.jpg" alt="Annotated comparison highlight for the city time-lapse" width="1680" height="640" loading="lazy" decoding="async" />
+                </a>
+                <figcaption><span>Scene 30</span><strong>City time-lapse</strong><button type="button" aria-label="Watch the Scene 30 city time-lapse comparison" data-scene-jump="30">Watch comparison <span aria-hidden="true">↗</span></button><p class="sr-only" id="highlight-30-finding">The annotation flags building-geometry changes in Sol-Attn and SpargeAttn; no corresponding region is highlighted in the three EVG panels.</p></figcaption>
+              </figure>
+              <figure class="difference-card">
+                <a href="assets/media/scene-37-highlight.jpg" target="_blank" rel="noopener" aria-label="Open the Scene 37 annotated highlight in a new tab" aria-describedby="highlight-37-finding">
+                  <img src="assets/media/scene-37-highlight.jpg" alt="Annotated comparison highlight for the pottery wheel scene" width="1680" height="640" loading="lazy" decoding="async" />
+                </a>
+                <figcaption><span>Scene 37</span><strong>Pottery wheel</strong><button type="button" aria-label="Watch the Scene 37 pottery wheel comparison" data-scene-jump="37">Watch comparison <span aria-hidden="true">↗</span></button><p class="sr-only" id="highlight-37-finding">The annotation flags a hand-to-clay boundary difference in SpargeAttn; no corresponding region is highlighted in the three EVG panels.</p></figcaption>
+              </figure>
+            </div>
+          </section>
         </div>
       </section>
 
