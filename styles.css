@@ -309,8 +309,8 @@ a {
   mask-image: radial-gradient(ellipse 44% 37% at 50% 43%, transparent 0 46%, rgba(0, 0, 0, 0.3) 68%, #000 100%);
 }
 
-.hero-wind .wind-base,
-.hero-wind .wind-flow {
+.hero-wind path,
+.hero-wind use {
   fill: none;
 }
 

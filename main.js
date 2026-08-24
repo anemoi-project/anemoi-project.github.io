@@ -428,7 +428,7 @@ const selectScene = (button, moveToPlayer = true, focusPlayer = false) => {
   if (sceneDescription) {
     sceneDescription.textContent = [scene?.description, scene?.finding].filter(Boolean).join(' ');
   }
-  video.setAttribute('aria-label', `Scene ${nextId}: ${nextLabel}, six-panel visual generation comparison`);
+  video.setAttribute('aria-label', `Scene ${nextId}: ${nextLabel}, six-panel video generation comparison`);
 
   sceneButtons.forEach((sceneButton) => {
     const selected = sceneButton === button;
@@ -589,7 +589,7 @@ copyButton?.addEventListener('click', async () => {
     'git clone https://github.com/anemoi-project/anemoi.git',
     'cd anemoi',
     'scripts/setup_conda_env.sh',
-    'conda activate evg',
+    'conda activate anemoi',
     'scripts/run_minimax_h3.sh',
   ].join('\n');
 

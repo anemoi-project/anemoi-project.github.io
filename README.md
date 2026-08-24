@@ -1,10 +1,7 @@
 # Anemoi Project Homepage
 
 Source for [anemoi-project.github.io](https://anemoi-project.github.io/), the official
-homepage for [Anemoi — Efficient Visual Generation](https://github.com/anemoi-project/anemoi).
-
-Named for the wind gods of Greek mythology, Anemoi uses a lightweight,
-code-native wind motif while keeping the existing black-and-blue visual system.
+homepage for [Anemoi — Efficient Video Generation](https://github.com/anemoi-project/anemoi).
 
 The site is intentionally dependency-free: plain HTML, CSS, and JavaScript can
 be served directly by GitHub Pages without a build step.

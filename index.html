@@ -5,22 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta
       name="description"
-      content="Named for the Greek gods of wind, Anemoi is a training-free inference engine for fast, sparse, mixed-precision visual generation."
+      content="Anemoi is a training-free inference engine for fast, sparse, mixed-precision video generation."
     />
     <meta name="theme-color" content="#070a0f" />
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="Anemoi — Efficient Visual Generation" />
+    <meta property="og:title" content="Anemoi — Efficient Video Generation" />
     <meta
       property="og:description"
-      content="Fast, sparse, mixed-precision visual generation—without training."
+      content="Fast, sparse, mixed-precision video generation—without training."
     />
     <meta property="og:url" content="https://anemoi-project.github.io/" />
     <meta property="og:image" content="https://anemoi-project.github.io/assets/media/scene-01-poster.jpg" />
     <meta property="og:image:width" content="1344" />
     <meta property="og:image:height" content="512" />
-    <meta property="og:image:alt" content="Six-panel visual generation comparison" />
+    <meta property="og:image:alt" content="Six-panel video generation comparison" />
     <meta name="twitter:card" content="summary_large_image" />
-    <title>Anemoi — Efficient Visual Generation</title>
+    <title>Anemoi — Efficient Video Generation</title>
     <link rel="stylesheet" href="styles.css" />
     <script>
       document.documentElement.classList.add('js');
@@ -40,7 +40,7 @@
 
     <header class="site-header" data-header>
       <nav class="nav shell" aria-label="Primary navigation">
-        <a class="brand" href="#top" aria-label="Anemoi — Efficient Visual Generation home">
+        <a class="brand" href="#top" aria-label="Anemoi — Efficient Video Generation home">
           <span>Anemoi</span>
         </a>
 
@@ -94,10 +94,10 @@
               <stop offset=".58" stop-color="#65d0ff" stop-opacity=".9" />
               <stop offset="1" stop-color="#65d0ff" stop-opacity="0" />
             </linearGradient>
-            <path id="wind-north" pathLength="100" d="M-120 174C180 60 360 245 650 154S1110 76 1560 190" />
-            <path id="wind-east" pathLength="100" d="M-160 290C180 206 380 350 680 267S1110 196 1540 308" />
-            <path id="wind-south" pathLength="100" d="M-120 535C230 430 440 610 730 520S1150 442 1560 560" />
-            <path id="wind-west" pathLength="100" d="M-120 655C250 552 520 724 825 635S1240 560 1560 690" />
+            <path id="wind-north" pathLength="100" fill="none" d="M-120 174C180 60 360 245 650 154S1110 76 1560 190" />
+            <path id="wind-east" pathLength="100" fill="none" d="M-160 290C180 206 380 350 680 267S1110 196 1540 308" />
+            <path id="wind-south" pathLength="100" fill="none" d="M-120 535C230 430 440 610 730 520S1150 442 1560 560" />
+            <path id="wind-west" pathLength="100" fill="none" d="M-120 655C250 552 520 724 825 635S1240 560 1560 690" />
           </defs>
           <g class="wind-base">
             <use href="#wind-north" />
@@ -115,26 +115,25 @@
         <div class="hero-glow" aria-hidden="true"></div>
 
         <div class="shell hero-inner">
-          <p class="eyebrow hero-eyebrow reveal">
+          <p class="eyebrow hero-eyebrow">
             <span class="status-dot" aria-hidden="true"></span>
-            Named for the winds · Open-source inference
+            Open-source video inference engine
           </p>
 
-          <h1 id="hero-title" class="reveal reveal-delay-1">
+          <h1 id="hero-title">
             <span class="hero-wordmark">Anemoi.</span>
-            <span class="hero-accent hero-descriptor">Efficient Visual Generation.</span>
+            <span class="hero-accent hero-descriptor">Efficient Video Generation.</span>
           </h1>
 
-          <p class="hero-kicker reveal reveal-delay-2">
+          <p class="hero-kicker">
             Fast. Sparse. Mixed-Precision.
           </p>
-          <p class="hero-summary reveal reveal-delay-2">
-            Named for the Greek gods of wind, Anemoi routes attention across spatially
-            structured 2D regions, then computes only the visual interactions that
-            matter—without training.
+          <p class="hero-summary">
+            Anemoi routes attention across spatially structured 2D regions, then computes
+            only the visual interactions that matter—without training.
           </p>
 
-          <div class="hero-actions reveal reveal-delay-3">
+          <div class="hero-actions">
             <a class="button button-primary" href="#get-started">
               Run Anemoi
               <svg aria-hidden="true" viewBox="0 0 16 16" width="16" height="16">
@@ -151,7 +150,7 @@
           </div>
 
           <!-- Reserved for a future announcement. Keep the three cells empty for now. -->
-          <div class="hero-proof is-placeholder reveal reveal-delay-3" aria-hidden="true">
+          <div class="hero-proof is-placeholder" aria-hidden="true">
             <div class="proof-item"></div>
             <div class="proof-item"></div>
             <div class="proof-item"></div>
@@ -170,7 +169,7 @@
         <div class="shell">
           <div class="section-heading reveal">
             <div>
-              <p class="section-index">01 / Visual evidence</p>
+              <p class="section-index">01 / Video evidence</p>
               <h2 id="showcase-title">Same prompt. Same seed.<br />Less attention.</h2>
             </div>
             <p>
@@ -196,7 +195,7 @@
                 playsinline
                 preload="metadata"
                 poster="assets/media/scene-01-poster.jpg"
-                aria-label="Six-panel visual generation comparison"
+                aria-label="Six-panel video generation comparison"
                 aria-describedby="comparison-description scene-description-text"
                 data-comparison-video
               >
@@ -625,7 +624,7 @@
 
 <span class="comment"># Prepare the runtime</span>
 <span class="prompt">$</span> scripts/setup_conda_env.sh
-<span class="prompt">$</span> conda activate evg
+<span class="prompt">$</span> conda activate anemoi
 
 <span class="comment"># Generate the demo video</span>
 <span class="prompt">$</span> scripts/run_minimax_h3.sh</code></pre>
@@ -660,7 +659,7 @@
         <div class="footer-brand">
           <div>
             <strong>Anemoi</strong>
-            <span>Efficient Visual Generation</span>
+            <span>Efficient Video Generation</span>
           </div>
         </div>
         <p>Zhejiang University × Nanjing University</p>
