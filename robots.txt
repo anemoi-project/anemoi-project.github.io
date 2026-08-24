@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://evg-project.github.io/sitemap.xml
+Sitemap: https://anemoi-project.github.io/sitemap.xml

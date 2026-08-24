@@ -5,22 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta
       name="description"
-      content="EVG is a training-free inference engine for fast, sparse, mixed-precision visual generation."
+      content="Named for the Greek gods of wind, Anemoi is a training-free inference engine for fast, sparse, mixed-precision visual generation."
     />
     <meta name="theme-color" content="#070a0f" />
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="EVG — Efficient Visual Generation" />
+    <meta property="og:title" content="Anemoi — Efficient Visual Generation" />
     <meta
       property="og:description"
-      content="Think in 2D. Compute only what matters."
+      content="Fast, sparse, mixed-precision visual generation—without training."
     />
-    <meta property="og:url" content="https://evg-project.github.io/" />
-    <meta property="og:image" content="https://evg-project.github.io/assets/media/scene-01-poster.jpg" />
+    <meta property="og:url" content="https://anemoi-project.github.io/" />
+    <meta property="og:image" content="https://anemoi-project.github.io/assets/media/scene-01-poster.jpg" />
     <meta property="og:image:width" content="1344" />
     <meta property="og:image:height" content="512" />
-    <meta property="og:image:alt" content="Six-panel EVG visual generation comparison" />
+    <meta property="og:image:alt" content="Six-panel visual generation comparison" />
     <meta name="twitter:card" content="summary_large_image" />
-    <title>EVG — Efficient Visual Generation</title>
+    <title>Anemoi — Efficient Visual Generation</title>
     <link rel="stylesheet" href="styles.css" />
     <script>
       document.documentElement.classList.add('js');
@@ -40,8 +40,8 @@
 
     <header class="site-header" data-header>
       <nav class="nav shell" aria-label="Primary navigation">
-        <a class="brand" href="#top" aria-label="Efficient Visual Generation home">
-          <span>Efficient Visual Generation</span>
+        <a class="brand" href="#top" aria-label="Anemoi — Efficient Visual Generation home">
+          <span>Anemoi</span>
         </a>
 
         <button
@@ -61,7 +61,7 @@
           <a href="#performance">Performance</a>
           <a href="#technology">Technology</a>
           <a href="#support">Support</a>
-          <a class="nav-github" href="https://github.com/evg-project/evg">
+          <a class="nav-github" href="https://github.com/anemoi-project/anemoi">
             <svg aria-hidden="true" viewBox="0 0 24 24" width="17" height="17">
               <path d="M12 .7A11.3 11.3 0 0 0 8.4 22.8c.6.1.8-.3.8-.6v-2.2c-3.4.7-4.1-1.4-4.1-1.4-.5-1.4-1.3-1.8-1.3-1.8-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.7 1.3 3.4 1 .1-.8.4-1.3.8-1.6-2.7-.3-5.5-1.3-5.5-6A4.7 4.7 0 0 1 6.2 7.5c-.1-.3-.5-1.6.1-3.3 0 0 1-.3 3.1 1.2a10.8 10.8 0 0 1 5.7 0c2.2-1.5 3.1-1.2 3.1-1.2.6 1.7.2 3 .1 3.3a4.7 4.7 0 0 1 1.2 3.2c0 4.7-2.8 5.7-5.5 6 .4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A11.3 11.3 0 0 0 12 .7Z" />
             </svg>
@@ -73,36 +73,75 @@
 
     <main id="main">
       <section class="hero" id="top" aria-labelledby="hero-title">
-        <div class="hero-grid" aria-hidden="true" data-signal-grid></div>
+        <svg
+          class="hero-wind"
+          viewBox="0 0 1440 800"
+          preserveAspectRatio="xMidYMid slice"
+          aria-hidden="true"
+          focusable="false"
+        >
+          <defs>
+            <linearGradient
+              id="anemoi-wind-stroke"
+              x1="0"
+              y1="0"
+              x2="1440"
+              y2="0"
+              gradientUnits="userSpaceOnUse"
+            >
+              <stop offset="0" stop-color="#66b2ff" stop-opacity="0" />
+              <stop offset=".2" stop-color="#66b2ff" stop-opacity=".62" />
+              <stop offset=".58" stop-color="#65d0ff" stop-opacity=".9" />
+              <stop offset="1" stop-color="#65d0ff" stop-opacity="0" />
+            </linearGradient>
+            <path id="wind-north" pathLength="100" d="M-120 174C180 60 360 245 650 154S1110 76 1560 190" />
+            <path id="wind-east" pathLength="100" d="M-160 290C180 206 380 350 680 267S1110 196 1540 308" />
+            <path id="wind-south" pathLength="100" d="M-120 535C230 430 440 610 730 520S1150 442 1560 560" />
+            <path id="wind-west" pathLength="100" d="M-120 655C250 552 520 724 825 635S1240 560 1560 690" />
+          </defs>
+          <g class="wind-base">
+            <use href="#wind-north" />
+            <use href="#wind-east" />
+            <use href="#wind-south" />
+            <use href="#wind-west" />
+          </g>
+          <g class="wind-flow">
+            <use href="#wind-north" />
+            <use href="#wind-east" />
+            <use href="#wind-south" />
+            <use href="#wind-west" />
+          </g>
+        </svg>
         <div class="hero-glow" aria-hidden="true"></div>
 
         <div class="shell hero-inner">
           <p class="eyebrow hero-eyebrow reveal">
             <span class="status-dot" aria-hidden="true"></span>
-            Open-source visual inference engine
+            Named for the winds · Open-source inference
           </p>
 
           <h1 id="hero-title" class="reveal reveal-delay-1">
-            <span>Efficient</span>
-            <span class="hero-accent">Visual Generation.</span>
+            <span class="hero-wordmark">Anemoi.</span>
+            <span class="hero-accent hero-descriptor">Efficient Visual Generation.</span>
           </h1>
 
           <p class="hero-kicker reveal reveal-delay-2">
             Fast. Sparse. Mixed-Precision.
           </p>
           <p class="hero-summary reveal reveal-delay-2">
-            EVG routes attention across spatially structured 2D regions, then
-            computes only the visual interactions that matter—without training.
+            Named for the Greek gods of wind, Anemoi routes attention across spatially
+            structured 2D regions, then computes only the visual interactions that
+            matter—without training.
           </p>
 
           <div class="hero-actions reveal reveal-delay-3">
             <a class="button button-primary" href="#get-started">
-              Run EVG
+              Run Anemoi
               <svg aria-hidden="true" viewBox="0 0 16 16" width="16" height="16">
                 <path d="M3 8h9M8.5 4.5 12 8l-3.5 3.5" />
               </svg>
             </a>
-            <a class="button button-secondary" href="https://github.com/evg-project/evg">
+            <a class="button button-secondary" href="https://github.com/anemoi-project/anemoi">
               View on GitHub
             </a>
             <a class="text-link" href="https://arxiv.org/pdf/2505.14708">
@@ -157,7 +196,7 @@
                 playsinline
                 preload="metadata"
                 poster="assets/media/scene-01-poster.jpg"
-                aria-label="Six-panel EVG visual generation comparison"
+                aria-label="Six-panel visual generation comparison"
                 aria-describedby="comparison-description scene-description-text"
                 data-comparison-video
               >
@@ -186,15 +225,15 @@
 
             <p class="sr-only" id="comparison-description">
               A synchronized six-panel comparison. From left to right, the panels are
-              Dense, Sol-Attn, SpargeAttn, EVG with 20% FP16, EVG with a 10%/10%
-              FP8/FP16 mix, and EVG with 20% FP8.
+              Dense, Sol-Attn, SpargeAttn, then three project outputs: 20% FP16, a
+              10%/10% FP8/FP16 mix, and 20% FP8.
             </p>
             <p class="sr-only" id="scene-description-text" data-scene-description aria-live="polite">
               A black wireless-earbud charging case in a minimalist studio product
               shot. Compare reflections, earbud geometry, and shadow consistency
               across the six synchronized panels. The annotated review flags
               earbud-geometry changes in Sol-Attn and SpargeAttn; no corresponding
-              region is highlighted in the three EVG panels.
+              region is highlighted in the three project panels.
             </p>
           </div>
 
@@ -247,49 +286,49 @@
                 <a href="assets/media/scene-01-highlight.jpg" target="_blank" rel="noopener" aria-label="Open the Scene 01 annotated highlight in a new tab" aria-describedby="highlight-01-finding">
                   <img src="assets/media/scene-01-highlight.jpg" alt="Annotated comparison highlight for the minimalist product scene" width="1680" height="640" loading="lazy" decoding="async" />
                 </a>
-                <figcaption><span>Scene 01</span><strong>Minimalist product</strong><button type="button" aria-label="Watch the Scene 01 minimalist product comparison" data-scene-jump="01">Watch comparison <span aria-hidden="true">↗</span></button><p class="sr-only" id="highlight-01-finding">The annotation flags earbud-geometry changes in Sol-Attn and SpargeAttn; no corresponding region is highlighted in the three EVG panels.</p></figcaption>
+                <figcaption><span>Scene 01</span><strong>Minimalist product</strong><button type="button" aria-label="Watch the Scene 01 minimalist product comparison" data-scene-jump="01">Watch comparison <span aria-hidden="true">↗</span></button><p class="sr-only" id="highlight-01-finding">The annotation flags earbud-geometry changes in Sol-Attn and SpargeAttn; no corresponding region is highlighted in the three project panels.</p></figcaption>
               </figure>
               <figure class="difference-card">
                 <a href="assets/media/scene-03-highlight.jpg" target="_blank" rel="noopener" aria-label="Open the Scene 03 annotated highlight in a new tab" aria-describedby="highlight-03-finding">
                   <img src="assets/media/scene-03-highlight.jpg" alt="Annotated comparison highlight for the 3D animated short" width="1680" height="640" loading="lazy" decoding="async" />
                 </a>
-                <figcaption><span>Scene 03</span><strong>3D animated short</strong><button type="button" aria-label="Watch the Scene 03 3D animated short comparison" data-scene-jump="03">Watch comparison <span aria-hidden="true">↗</span></button><p class="sr-only" id="highlight-03-finding">The annotation flags fine subject-detail changes in Sol-Attn and SpargeAttn; no corresponding region is highlighted in the three EVG panels.</p></figcaption>
+                <figcaption><span>Scene 03</span><strong>3D animated short</strong><button type="button" aria-label="Watch the Scene 03 3D animated short comparison" data-scene-jump="03">Watch comparison <span aria-hidden="true">↗</span></button><p class="sr-only" id="highlight-03-finding">The annotation flags fine subject-detail changes in Sol-Attn and SpargeAttn; no corresponding region is highlighted in the three project panels.</p></figcaption>
               </figure>
               <figure class="difference-card">
                 <a href="assets/media/scene-05-highlight.jpg" target="_blank" rel="noopener" aria-label="Open the Scene 05 annotated highlight in a new tab" aria-describedby="highlight-05-finding">
                   <img src="assets/media/scene-05-highlight.jpg" alt="Annotated comparison highlight for the nature documentary" width="1680" height="640" loading="lazy" decoding="async" />
                 </a>
-                <figcaption><span>Scene 05</span><strong>Nature documentary</strong><button type="button" aria-label="Watch the Scene 05 nature documentary comparison" data-scene-jump="05">Watch comparison <span aria-hidden="true">↗</span></button><p class="sr-only" id="highlight-05-finding">The annotation flags differences around the small animal in Sol-Attn and SpargeAttn; no corresponding region is highlighted in the three EVG panels.</p></figcaption>
+                <figcaption><span>Scene 05</span><strong>Nature documentary</strong><button type="button" aria-label="Watch the Scene 05 nature documentary comparison" data-scene-jump="05">Watch comparison <span aria-hidden="true">↗</span></button><p class="sr-only" id="highlight-05-finding">The annotation flags differences around the small animal in Sol-Attn and SpargeAttn; no corresponding region is highlighted in the three project panels.</p></figcaption>
               </figure>
               <figure class="difference-card">
                 <a href="assets/media/scene-09-highlight.jpg" target="_blank" rel="noopener" aria-label="Open the Scene 09 annotated highlight in a new tab" aria-describedby="highlight-09-finding">
                   <img src="assets/media/scene-09-highlight.jpg" alt="Annotated comparison highlight for the macro insect scene" width="1680" height="640" loading="lazy" decoding="async" />
                 </a>
-                <figcaption><span>Scene 09</span><strong>Macro insect</strong><button type="button" aria-label="Watch the Scene 09 macro insect comparison" data-scene-jump="09">Watch comparison <span aria-hidden="true">↗</span></button><p class="sr-only" id="highlight-09-finding">The annotation flags differences around the insect head in Sol-Attn and SpargeAttn; no corresponding region is highlighted in the three EVG panels.</p></figcaption>
+                <figcaption><span>Scene 09</span><strong>Macro insect</strong><button type="button" aria-label="Watch the Scene 09 macro insect comparison" data-scene-jump="09">Watch comparison <span aria-hidden="true">↗</span></button><p class="sr-only" id="highlight-09-finding">The annotation flags differences around the insect head in Sol-Attn and SpargeAttn; no corresponding region is highlighted in the three project panels.</p></figcaption>
               </figure>
               <figure class="difference-card">
                 <a href="assets/media/scene-15-highlight.jpg" target="_blank" rel="noopener" aria-label="Open the Scene 15 annotated highlight in a new tab" aria-describedby="highlight-15-finding">
                   <img src="assets/media/scene-15-highlight.jpg" alt="Annotated comparison highlight for the eagle in flight scene" width="1680" height="640" loading="lazy" decoding="async" />
                 </a>
-                <figcaption><span>Scene 15</span><strong>Eagle in flight</strong><button type="button" aria-label="Watch the Scene 15 eagle in flight comparison" data-scene-jump="15">Watch comparison <span aria-hidden="true">↗</span></button><p class="sr-only" id="highlight-15-finding">The annotation flags differences around the distant flying subject in the comparison baselines; no corresponding region is highlighted in the three EVG panels.</p></figcaption>
+                <figcaption><span>Scene 15</span><strong>Eagle in flight</strong><button type="button" aria-label="Watch the Scene 15 eagle in flight comparison" data-scene-jump="15">Watch comparison <span aria-hidden="true">↗</span></button><p class="sr-only" id="highlight-15-finding">The annotation flags differences around the distant flying subject in the comparison baselines; no corresponding region is highlighted in the three project panels.</p></figcaption>
               </figure>
               <figure class="difference-card">
                 <a href="assets/media/scene-18-highlight.jpg" target="_blank" rel="noopener" aria-label="Open the Scene 18 annotated highlight in a new tab" aria-describedby="highlight-18-finding">
                   <img src="assets/media/scene-18-highlight.jpg" alt="Annotated comparison highlight for the tea ceremony" width="1680" height="640" loading="lazy" decoding="async" />
                 </a>
-                <figcaption><span>Scene 18</span><strong>Tea ceremony</strong><button type="button" aria-label="Watch the Scene 18 tea ceremony comparison" data-scene-jump="18">Watch comparison <span aria-hidden="true">↗</span></button><p class="sr-only" id="highlight-18-finding">The annotation flags hand-and-utensil detail changes in Sol-Attn and SpargeAttn; no corresponding region is highlighted in the three EVG panels.</p></figcaption>
+                <figcaption><span>Scene 18</span><strong>Tea ceremony</strong><button type="button" aria-label="Watch the Scene 18 tea ceremony comparison" data-scene-jump="18">Watch comparison <span aria-hidden="true">↗</span></button><p class="sr-only" id="highlight-18-finding">The annotation flags hand-and-utensil detail changes in Sol-Attn and SpargeAttn; no corresponding region is highlighted in the three project panels.</p></figcaption>
               </figure>
               <figure class="difference-card">
                 <a href="assets/media/scene-30-highlight.jpg" target="_blank" rel="noopener" aria-label="Open the Scene 30 annotated highlight in a new tab" aria-describedby="highlight-30-finding">
                   <img src="assets/media/scene-30-highlight.jpg" alt="Annotated comparison highlight for the city time-lapse" width="1680" height="640" loading="lazy" decoding="async" />
                 </a>
-                <figcaption><span>Scene 30</span><strong>City time-lapse</strong><button type="button" aria-label="Watch the Scene 30 city time-lapse comparison" data-scene-jump="30">Watch comparison <span aria-hidden="true">↗</span></button><p class="sr-only" id="highlight-30-finding">The annotation flags building-geometry changes in Sol-Attn and SpargeAttn; no corresponding region is highlighted in the three EVG panels.</p></figcaption>
+                <figcaption><span>Scene 30</span><strong>City time-lapse</strong><button type="button" aria-label="Watch the Scene 30 city time-lapse comparison" data-scene-jump="30">Watch comparison <span aria-hidden="true">↗</span></button><p class="sr-only" id="highlight-30-finding">The annotation flags building-geometry changes in Sol-Attn and SpargeAttn; no corresponding region is highlighted in the three project panels.</p></figcaption>
               </figure>
               <figure class="difference-card">
                 <a href="assets/media/scene-37-highlight.jpg" target="_blank" rel="noopener" aria-label="Open the Scene 37 annotated highlight in a new tab" aria-describedby="highlight-37-finding">
                   <img src="assets/media/scene-37-highlight.jpg" alt="Annotated comparison highlight for the pottery wheel scene" width="1680" height="640" loading="lazy" decoding="async" />
                 </a>
-                <figcaption><span>Scene 37</span><strong>Pottery wheel</strong><button type="button" aria-label="Watch the Scene 37 pottery wheel comparison" data-scene-jump="37">Watch comparison <span aria-hidden="true">↗</span></button><p class="sr-only" id="highlight-37-finding">The annotation flags a hand-to-clay boundary difference in SpargeAttn; no corresponding region is highlighted in the three EVG panels.</p></figcaption>
+                <figcaption><span>Scene 37</span><strong>Pottery wheel</strong><button type="button" aria-label="Watch the Scene 37 pottery wheel comparison" data-scene-jump="37">Watch comparison <span aria-hidden="true">↗</span></button><p class="sr-only" id="highlight-37-finding">The annotation flags a hand-to-clay boundary difference in SpargeAttn; no corresponding region is highlighted in the three project panels.</p></figcaption>
               </figure>
             </div>
           </section>
@@ -304,7 +343,7 @@
               <h2 id="performance-title">Spend less time<br />inside attention.</h2>
             </div>
             <p>
-              EVG combines spatial sparsity with precision-aware execution. The published
+              Anemoi combines spatial sparsity with precision-aware execution. The published
               generation benchmark and the current exact-cover layout are shown separately.
             </p>
           </div>
@@ -337,7 +376,7 @@
                   <span class="latency-track"><i style="--bar: 81.6%"></i></span>
                 </div>
                 <div class="latency-row is-best">
-                  <div><span>EVG</span><b>328.26s</b></div>
+                  <div><span>Anemoi</span><b>328.26s</b></div>
                   <span class="latency-track"><i style="--bar: 77.1%"></i></span>
                 </div>
               </div>
@@ -353,19 +392,19 @@
               <p class="metric-number">96.90<span>%</span></p>
               <h3>Useful physical QK work</h3>
               <p class="routing-copy">
-                EVG's exact-cover partition packs a 24×42 latent grid into 16 connected
+                Anemoi's exact-cover partition packs a 24×42 latent grid into 16 connected
                 ragged blocks instead of 18 regular blocks.
               </p>
 
               <div class="partition-chart">
-                <p class="sr-only">Useful physical QK work for regular and EVG exact-cover partitions.</p>
+                <p class="sr-only">Useful physical QK work for regular and Anemoi exact-cover partitions.</p>
                 <div class="partition-row">
                   <div><span>Regular grid</span><b>18 blocks</b></div>
                   <span class="partition-track"><i style="--bar: 76.56%"></i></span>
                   <strong>76.56%</strong>
                 </div>
                 <div class="partition-row is-best">
-                  <div><span>EVG exact cover</span><b>16 blocks</b></div>
+                  <div><span>Anemoi exact cover</span><b>16 blocks</b></div>
                   <span class="partition-track"><i style="--bar: 96.90%"></i></span>
                   <strong>96.90%</strong>
                 </div>
@@ -390,7 +429,7 @@
             <p>1344×768</p>
             <p>239 frames</p>
             <p>24 FPS</p>
-            <a href="https://github.com/evg-project/evg#visualization-examples">
+            <a href="https://github.com/anemoi-project/anemoi#visualization-examples">
               Benchmark source <span aria-hidden="true">↗</span>
             </a>
           </div>
@@ -406,7 +445,7 @@
               <span>Compute only what matters.</span>
             </h2>
             <p>
-              Visual tokens carry spatial structure. EVG keeps it intact long enough to
+              Visual tokens carry spatial structure. Anemoi keeps it intact long enough to
               route attention by region, then assigns precision to the retained work.
             </p>
           </div>
@@ -478,7 +517,7 @@
               </div>
               <h3>Ragged 2D execution</h3>
               <p>Pack connected visual regions into exact-cover blocks and execute only retained pairs.</p>
-              <a href="https://github.com/evg-project/evg/blob/master/docs/ragged_mpa.md">Explore the design <span aria-hidden="true">↗</span></a>
+              <a href="https://github.com/anemoi-project/anemoi/blob/master/docs/ragged_mpa.md">Explore the design <span aria-hidden="true">↗</span></a>
             </article>
             <article class="tech-card reveal reveal-delay-2">
               <span class="tech-number">03</span>
@@ -487,7 +526,7 @@
               </div>
               <h3>Mixed precision</h3>
               <p>Protect critical structure in FP16 while routing suitable retained work to lower precision.</p>
-              <a href="https://github.com/evg-project/evg/tree/master/evg/layers/attention/mpa">Inspect the code <span aria-hidden="true">↗</span></a>
+              <a href="https://github.com/anemoi-project/anemoi/tree/master/evg/layers/attention/mpa">Inspect the code <span aria-hidden="true">↗</span></a>
             </article>
           </div>
         </div>
@@ -501,7 +540,7 @@
               <h2 id="support-title">One validated path.<br />More on deck.</h2>
             </div>
             <p>
-              EVG keeps support claims precise: MiniMax-H3 on SM89 is the current
+              Anemoi keeps support claims precise: MiniMax-H3 on SM89 is the current
               executable mainline. Additional adapters are visible, but not yet validated.
             </p>
           </div>
@@ -509,7 +548,7 @@
           <div class="support-layout">
             <div class="support-table-wrap reveal">
               <table>
-                <caption class="sr-only">Currently validated EVG model and hardware support</caption>
+                <caption class="sr-only">Currently validated Anemoi model and hardware support</caption>
                 <thead>
                   <tr>
                     <th scope="col">Model</th>
@@ -541,7 +580,7 @@
                 <li><span>SkyReels V3</span><small>scaffolded</small></li>
                 <li><span>Bernini</span><small>scaffolded</small></li>
               </ul>
-              <a href="https://github.com/evg-project/evg/blob/master/docs/model_support.md">
+              <a href="https://github.com/anemoi-project/anemoi/blob/master/docs/model_support.md">
                 Follow model support <span aria-hidden="true">→</span>
               </a>
             </aside>
@@ -566,7 +605,7 @@
               <li>Conda</li>
               <li>First-run network</li>
             </ul>
-            <a class="button button-secondary" href="https://github.com/evg-project/evg/blob/master/evg/models/minimax_h3/REPRODUCTION.md">
+            <a class="button button-secondary" href="https://github.com/anemoi-project/anemoi/blob/master/evg/models/minimax_h3/REPRODUCTION.md">
               Reproduction guide
             </a>
           </div>
@@ -574,15 +613,15 @@
           <div class="terminal reveal reveal-delay-1">
             <div class="terminal-bar">
               <div aria-hidden="true"><span></span><span></span><span></span></div>
-              <p>evg / quick-start</p>
+              <p>anemoi / quick-start</p>
               <button type="button" data-copy-code>
                 <svg aria-hidden="true" viewBox="0 0 18 18"><path d="M6 5V3h9v9h-2M3 6h9v9H3z" /></svg>
                 <span data-copy-label aria-live="polite">Copy</span>
               </button>
             </div>
-            <pre><code data-quickstart><span class="comment"># Clone and enter EVG</span>
-<span class="prompt">$</span> git clone https://github.com/evg-project/evg.git
-<span class="prompt">$</span> cd evg
+            <pre><code data-quickstart><span class="comment"># Clone and enter Anemoi</span>
+<span class="prompt">$</span> git clone https://github.com/anemoi-project/anemoi.git
+<span class="prompt">$</span> cd anemoi
 
 <span class="comment"># Prepare the runtime</span>
 <span class="prompt">$</span> scripts/setup_conda_env.sh
@@ -604,13 +643,13 @@
           <p class="section-index">Build with us</p>
           <h2 id="closing-title">Make every visual<br />token earn its compute.</h2>
           <div class="closing-actions">
-            <a class="button button-primary" href="https://github.com/evg-project/evg">
+            <a class="button button-primary" href="https://github.com/anemoi-project/anemoi">
               Explore the repository
               <svg aria-hidden="true" viewBox="0 0 16 16" width="16" height="16">
                 <path d="M3 8h9M8.5 4.5 12 8l-3.5 3.5" />
               </svg>
             </a>
-            <a class="text-link" href="https://github.com/evg-project/evg/issues">Open an issue <span aria-hidden="true">↗</span></a>
+            <a class="text-link" href="https://github.com/anemoi-project/anemoi/issues">Open an issue <span aria-hidden="true">↗</span></a>
           </div>
         </div>
       </section>
@@ -620,15 +659,15 @@
       <div class="shell footer-inner">
         <div class="footer-brand">
           <div>
-            <strong>Efficient Visual Generation</strong>
-            <span>Open-source visual inference engine</span>
+            <strong>Anemoi</strong>
+            <span>Efficient Visual Generation</span>
           </div>
         </div>
         <p>Zhejiang University × Nanjing University</p>
         <div class="footer-links">
-          <a href="https://github.com/evg-project/evg">GitHub</a>
+          <a href="https://github.com/anemoi-project/anemoi">GitHub</a>
           <a href="https://arxiv.org/pdf/2505.14708">Paper</a>
-          <a href="https://github.com/evg-project/evg/blob/master/LICENSE">Apache-2.0</a>
+          <a href="https://github.com/anemoi-project/anemoi/blob/master/LICENSE">Apache-2.0</a>
         </div>
       </div>
     </footer>

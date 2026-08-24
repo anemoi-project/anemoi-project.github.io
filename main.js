@@ -113,29 +113,6 @@ if ('IntersectionObserver' in window) {
   sections.forEach((section) => sectionObserver.observe(section));
 }
 
-const signalGrid = document.querySelector('[data-signal-grid]');
-
-if (signalGrid) {
-  const fragment = document.createDocumentFragment();
-
-  for (let index = 0; index < 112; index += 1) {
-    const cell = document.createElement('span');
-    cell.className = 'signal-cell';
-
-    if ((index * 7 + 11) % 19 < 3) {
-      cell.classList.add('is-hot');
-      cell.style.setProperty('--delay', `${-((index * 0.17) % 4).toFixed(2)}s`);
-    } else if ((index * 5 + 3) % 23 < 3) {
-      cell.classList.add('is-cool');
-      cell.style.setProperty('--delay', `${-((index * 0.13) % 5).toFixed(2)}s`);
-    }
-
-    fragment.appendChild(cell);
-  }
-
-  signalGrid.appendChild(fragment);
-}
-
 const video = document.querySelector('[data-comparison-video]');
 const videoFrame = video?.closest('.video-frame');
 const videoToggle = document.querySelector('[data-video-toggle]');
@@ -209,14 +186,14 @@ const sceneDescriptions = {
 };
 
 const sceneFindings = {
-  '01': 'The annotated review flags earbud-geometry changes in Sol-Attn and SpargeAttn; no corresponding region is highlighted in the three EVG panels.',
-  '03': 'The annotated review flags fine subject-detail changes in Sol-Attn and SpargeAttn; no corresponding region is highlighted in the three EVG panels.',
-  '05': 'The annotated review flags differences around the small animal in Sol-Attn and SpargeAttn; no corresponding region is highlighted in the three EVG panels.',
-  '09': 'The annotated review flags differences around the insect head in Sol-Attn and SpargeAttn; no corresponding region is highlighted in the three EVG panels.',
-  '15': 'The annotated review flags differences around the distant flying subject in the comparison baselines; no corresponding region is highlighted in the three EVG panels.',
-  '18': 'The annotated review flags hand-and-utensil detail changes in Sol-Attn and SpargeAttn; no corresponding region is highlighted in the three EVG panels.',
-  '30': 'The annotated review flags building-geometry changes in Sol-Attn and SpargeAttn; no corresponding region is highlighted in the three EVG panels.',
-  '37': 'The annotated review flags a hand-to-clay boundary difference in SpargeAttn; no corresponding region is highlighted in the three EVG panels.',
+  '01': 'The annotated review flags earbud-geometry changes in Sol-Attn and SpargeAttn; no corresponding region is highlighted in the three project panels.',
+  '03': 'The annotated review flags fine subject-detail changes in Sol-Attn and SpargeAttn; no corresponding region is highlighted in the three project panels.',
+  '05': 'The annotated review flags differences around the small animal in Sol-Attn and SpargeAttn; no corresponding region is highlighted in the three project panels.',
+  '09': 'The annotated review flags differences around the insect head in Sol-Attn and SpargeAttn; no corresponding region is highlighted in the three project panels.',
+  '15': 'The annotated review flags differences around the distant flying subject in the comparison baselines; no corresponding region is highlighted in the three project panels.',
+  '18': 'The annotated review flags hand-and-utensil detail changes in Sol-Attn and SpargeAttn; no corresponding region is highlighted in the three project panels.',
+  '30': 'The annotated review flags building-geometry changes in Sol-Attn and SpargeAttn; no corresponding region is highlighted in the three project panels.',
+  '37': 'The annotated review flags a hand-to-clay boundary difference in SpargeAttn; no corresponding region is highlighted in the three project panels.',
 };
 
 const scenes = [
@@ -451,7 +428,7 @@ const selectScene = (button, moveToPlayer = true, focusPlayer = false) => {
   if (sceneDescription) {
     sceneDescription.textContent = [scene?.description, scene?.finding].filter(Boolean).join(' ');
   }
-  video.setAttribute('aria-label', `Scene ${nextId}: ${nextLabel}, six-panel EVG comparison`);
+  video.setAttribute('aria-label', `Scene ${nextId}: ${nextLabel}, six-panel visual generation comparison`);
 
   sceneButtons.forEach((sceneButton) => {
     const selected = sceneButton === button;
@@ -609,8 +586,8 @@ copyButton?.addEventListener('click', async () => {
   if (!quickstart || !copyLabel) return;
 
   const commands = [
-    'git clone https://github.com/evg-project/evg.git',
-    'cd evg',
+    'git clone https://github.com/anemoi-project/anemoi.git',
+    'cd anemoi',
     'scripts/setup_conda_env.sh',
     'conda activate evg',
     'scripts/run_minimax_h3.sh',

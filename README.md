@@ -1,7 +1,10 @@
-# EVG Project Homepage
+# Anemoi Project Homepage
 
-Source for [evg-project.github.io](https://evg-project.github.io/), the official
-homepage for [EVG — Efficient Visual Generation](https://github.com/evg-project/evg).
+Source for [anemoi-project.github.io](https://anemoi-project.github.io/), the official
+homepage for [Anemoi — Efficient Visual Generation](https://github.com/anemoi-project/anemoi).
+
+Named for the wind gods of Greek mythology, Anemoi uses a lightweight,
+code-native wind motif while keeping the existing black-and-blue visual system.
 
 The site is intentionally dependency-free: plain HTML, CSS, and JavaScript can
 be served directly by GitHub Pages without a build step.
@@ -30,7 +33,7 @@ deployed site.
 ## Video assets
 
 All 50 directly playable comparison videos are optimized web editions derived
-from `evg/asserts/visualization/videos/` in the main EVG repository. The source
+from `anemoi/asserts/visualization/videos/` in the main Anemoi repository. The source
 videos are 4032×1536 six-panel composites; homepage editions are 2016×768,
 H.264/yuv420p, muted, and prepared with `faststart` for browser streaming. The
 eight annotated difference highlights are optimized derivatives of the review
@@ -48,7 +51,7 @@ The top-level `.nojekyll` file makes GitHub Pages serve the static files as-is.
 
 ## Accuracy notes
 
-- RTX 4090 end-to-end results reproduce the public EVG README benchmark.
+- RTX 4090 end-to-end results reproduce the public Anemoi README benchmark.
 - The exact-cover layout statistic is identified as a physical-work efficiency
   example rather than an end-to-end speedup claim.
 - MiniMax-H3 on SM89 is the only currently validated end-to-end path. Other
